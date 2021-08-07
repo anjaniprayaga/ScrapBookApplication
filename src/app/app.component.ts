@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { HeaderComponent } from './header/header.component';
+import { PostListComponent } from './post-list/post-list.component';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  
   title = 'live-posts';
 }

@@ -15,6 +15,7 @@ export class PostComponent implements OnInit {
   constructor(private postService: PostService, private router: Router) { }
 
   ngOnInit(): void {
+    
     console.log(this.post)
     console.log(this.index)
   }

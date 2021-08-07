@@ -10,6 +10,7 @@ import { AuthComponent } from './auth/auth.component';
 import { RouterModule, Routes } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { CommentComponent } from './comment/comment.component';
 
 const routes : Routes=[
   {
@@ -42,7 +43,8 @@ const routes : Routes=[
     PostListComponent,
     PostComponent,
     PostEditComponent,
-    AuthComponent
+    AuthComponent,
+    CommentComponent
   ],
   imports: [
     BrowserModule, RouterModule.forRoot(routes), ReactiveFormsModule, HttpClientModule

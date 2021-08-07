@@ -1,13 +1,16 @@
-<h2>{{ post?.title }}</h2>
+<h2>{{ post?.title | titlecase }}</h2>
 <p>
   {{ post?.description}}
 </p>
 <img class="img-responsive" src="{{ post?.imagePath}}" />
 <p>Author: {{ post?.author }}</p>
-<p> Date: {{ post?.datetimeCreated }}</p>
+<p> Date: {{ post?.datetimeCreated | date:"dd/MM/yy" }}</p>
 <button type="button" (click)="likePost()" class="btn btn-default btn-sm">
   <span class="glyphicon glyphicon-thumbs-up"></span> Like({{post?.numberOfLikes}})
-</button><br /><br />
+</button> | <button type="button" class="btn btn-primary"> <span class="glyphicon glyphicon-comment"></span> Comments</button><br /><br />
+
 <button class="btn btn-primary" (click)="onEdit()">Edit</button> | 
 <button class="btn btn-danger" (click)="onDelete()">Delete</button>
 <hr />
+
+<app-comment></app-comment>
